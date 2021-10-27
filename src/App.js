@@ -1,24 +1,22 @@
-import logo from './logo.svg';
+import { BrowserRouter, Route } from "react-router-dom"
 import './App.css';
+import Contain from './component/Contain';
+import MoviePage from "./component/MoviePage";
 
 function App() {
   return (
+    <>
+  
+    <BrowserRouter> 
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+   
+      <Route path="/" component={Contain} exact/>
+      <Route path="/movie/:id" component={MoviePage}/>
+   
     </div>
+    </BrowserRouter> 
+   
+    </>
   );
 }
 

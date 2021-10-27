@@ -4,6 +4,8 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 
+import 'reactjs-popup/dist/index.css';
+
 ReactDOM.render(
   <React.StrictMode>
     <App />
